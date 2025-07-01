@@ -1,0 +1,23 @@
+{
+  "evaluation_timestamp": "2025-06-30T19:32:04.861721",
+  "model_path": "models/fine_tuned/final_model",
+  "target_achievement": {
+    "accuracy_target_86_percent": null,
+    "latency_target_350ms": false,
+    "overall_success": null
+  },
+  "accuracy_metrics": null,
+  "performance_metrics": {
+    "average_latency": 13319.311666488647,
+    "working_average_latency": 13326.687693595886,
+    "max_latency": 13473.595142364502,
+    "min_latency": 13232.552289962769,
+    "all_latencies": [
+      13289.807558059692,
+      13232.552289962769,
+      13473.595142364502,
+      13362.977981567383,
+      13237.625360488892
+    ]
+  }
+}

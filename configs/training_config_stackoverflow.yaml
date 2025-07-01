@@ -1,0 +1,61 @@
+# Training Configuration for Stack Overflow Knowledge Assistant
+
+# Model configuration
+model:
+  name: "meta-llama/Llama-3.1-8B-Instruct"
+  use_auth_token: true
+  load_in_8bit: false  # Set to true if you have <24GB GPU memory
+  device_map: "auto"
+
+# LoRA configuration - Optimized for code/technical content
+lora:
+  r: 32  # Higher rank for complex technical knowledge
+  lora_alpha: 64
+  target_modules:
+    - "q_proj"
+    - "k_proj" 
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  lora_dropout: 0.05  # Lower dropout for technical precision
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# Training configuration
+training:
+  num_epochs: 3
+  batch_size: 2  # Small batch size for long code snippets
+  gradient_accumulation_steps: 8  # Effective batch size = 16
+  learning_rate: 1e-4  # Lower LR for technical content
+  warmup_steps: 200
+  logging_steps: 20
+  save_steps: 500
+  eval_steps: 250
+  save_total_limit: 3
+  fp16: true
+  gradient_checkpointing: true
+  max_seq_length: 1024  # Longer for code examples
+  
+# Dataset configuration
+dataset:
+  train_split: 0.95  # More training data
+  val_split: 0.05
+  max_samples: null
+  
+# RAG configuration - Optimized for code search
+rag:
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"  # Better for code
+  chunk_size: 800  # Larger chunks to keep code blocks intact
+  chunk_overlap: 100
+  top_k: 7  # More context for complex questions
+  
+# Evaluation configuration
+evaluation:
+  metrics: ["exact_match", "f1", "bleu", "code_bleu"]
+  
+# Paths
+paths:
+  output_dir: "./models/stackoverflow_assistant"
+  logs_dir: "./logs"

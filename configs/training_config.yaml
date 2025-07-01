@@ -1,0 +1,64 @@
+# Training Configuration for LLM Knowledge Assistant
+
+# Model configuration
+model:
+  name: "meta-llama/Llama-3.1-8B-Instruct"
+  use_auth_token: true
+  load_in_8bit: false  # Set to true if you have memory constraints
+  device_map: "auto"
+
+# LoRA configuration
+lora:
+  r: 16  # LoRA rank - higher values = more parameters but better quality
+  lora_alpha: 32  # LoRA scaling parameter
+  target_modules:  # Which layers to apply LoRA to
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  lora_dropout: 0.1
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# Training configuration
+training:
+  num_epochs: 3
+  batch_size: 4  # Adjust based on your GPU memory
+  gradient_accumulation_steps: 4  # Effective batch size = 4 * 4 = 16
+  learning_rate: 0.0002
+  warmup_steps: 100
+  logging_steps: 10
+  save_steps: 500
+  eval_steps: 0
+  
+  save_total_limit: 3
+  fp16: false  # Mixed precision training
+  bf16: true
+  gradient_checkpointing: true  # Save memory at the cost of speed
+  max_seq_length: 512  # Maximum sequence length
+  per_device_eval_batch_size: 1
+  
+# Dataset configuration
+dataset:
+  train_split: 0.9
+  val_split: 0.1
+  max_samples: null  # Set to a number to limit dataset size for testing
+  
+# RAG configuration
+rag:
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  chunk_size: 500
+  chunk_overlap: 50
+  top_k: 5  # Number of documents to retrieve
+  
+# Evaluation configuration
+evaluation:
+  metrics: ["exact_match", "f1", "bleu"]
+  
+# Paths
+paths:
+  output_dir: "./models/fine_tuned"
+  logs_dir: "./logs"

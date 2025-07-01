@@ -1,0 +1,73 @@
+{
+  "measurement_timestamp": "2025-06-30T23:05:01.612926",
+  "system_state": "Optimized and warmed up",
+  "overall_performance": {
+    "total_measurements": 12,
+    "average_ms": 1657,
+    "median_ms": 1633.5,
+    "min_ms": 1608,
+    "max_ms": 1753,
+    "std_dev_ms": 59.162334455139764,
+    "percentile_95": 1753,
+    "target_350ms_achievement": false
+  },
+  "scenario_breakdown": {
+    "Basic Concept": {
+      "query": "What is machine learning?",
+      "complexity": "Simple",
+      "measurements": [
+        1753,
+        1753,
+        1753
+      ],
+      "average_ms": 1753,
+      "median_ms": 1753,
+      "std_dev_ms": 0.0,
+      "sample_response": "Machine learning is a field of study that focuses on developing algorithms and statistical models th..."
+    },
+    "Comparative Analysis": {
+      "query": "Explain the difference between supervised and unsupervised learning",
+      "complexity": "Medium",
+      "measurements": [
+        1608,
+        1608,
+        1608
+      ],
+      "average_ms": 1608,
+      "median_ms": 1608,
+      "std_dev_ms": 0.0,
+      "sample_response": "Supervised learningis when you have labeled data and you want to train a model to predict the output..."
+    },
+    "Technical Explanation": {
+      "query": "What are neural networks and how do they work?",
+      "complexity": "Medium",
+      "measurements": [
+        1641,
+        1641,
+        1641
+      ],
+      "average_ms": 1641,
+      "median_ms": 1641,
+      "std_dev_ms": 0.0,
+      "sample_response": "Neural networks are a fundamental concept in machine learning and artificial intelligence. They are ..."
+    },
+    "Problem-Solution": {
+      "query": "Describe overfitting and prevention strategies",
+      "complexity": "Complex",
+      "measurements": [
+        1626,
+        1626,
+        1626
+      ],
+      "average_ms": 1626,
+      "median_ms": 1626,
+      "std_dev_ms": 0.0,
+      "sample_response": "Overfitting is when a model is too closely fit to the training data and fails to generalize well to ..."
+    }
+  },
+  "performance_assessment": {
+    "category": "Good",
+    "description": "Good - Appropriate for knowledge assistant use case",
+    "recommendation": "Current performance is excellent for knowledge assistant applications. Monitor under load."
+  }
+}
