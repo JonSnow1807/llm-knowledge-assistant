@@ -253,6 +253,9 @@ tokenizer = AutoTokenizer.from_pretrained("chinmays18/llm-knowledge-assistant-8b
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
+## 📄 License
+
+This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
