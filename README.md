@@ -29,6 +29,32 @@ Built an **enterprise-grade Retrieval-Augmented Generation (RAG) system** that d
 | **Knowledge Base** | 5K docs | **11,791 docs** | ✅ **Exceeded** |
 | **Model Efficiency** | N/A | **0.52% trainable params** | ✅ **Optimal** |
 
+
+## 📊 Training Dataset
+
+### **Knowledge Domains**
+- **🔧 C Programming**: 6,000 high-quality Q&A pairs from Stack Overflow
+- **☁️ AWS Cloud Architecture**: 209 comprehensive white-papers and best practices
+
+### **Dataset Composition**
+| Source | Count | Domain | Description |
+|--------|-------|---------|-------------|
+| **Mxode/StackOverflow-QA-C-Language-40k** | 6,000 samples | C Programming | Real developer questions with expert answers |
+| **si3mshady/aws_whitepapers** | 209 documents | Cloud Architecture | AWS best practices and technical guides |
+
+### **Data Quality & Processing**
+- **Question Length**: 5–25 words (concise, specific programming queries)
+- **Answer Length**: 10–200 words (practical solutions to technical summaries)
+- **Text Processing**: Cleaned whitespace, truncated at 1,500 characters for consistency
+- **Total Training Samples**: 5,890 processed Q&A pairs
+- **Knowledge Base**: 11,791 indexed document chunks
+
+**Why This Dataset is Powerful:**
+- ✅ **Real-world questions** from practicing developers
+- ✅ **Expert-curated answers** from Stack Overflow community
+- ✅ **Production documentation** from AWS technical teams
+- ✅ **Multi-domain expertise** (Systems Programming + Cloud Architecture)
+
 ## 🏗️ System Architecture
 
 ```mermaid
