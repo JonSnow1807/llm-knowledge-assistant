@@ -10,7 +10,7 @@
 
 ## 🎯 Project Overview
 
-Built an **enterprise-grade Retrieval-Augmented Generation (RAG) system** that delivers expert-level responses to technical questions. Successfully fine-tuned **Llama-3.1-8B** using LoRA and integrated with **FAISS vector search** to create a production-ready knowledge assistant.
+Built an **enterprise-grade Retrieval-Augmented Generation (RAG) system** specializing in **C programming and AWS cloud architecture** that delivers expert-level responses to technical questions. Successfully fine-tuned **Llama-3.1-8B** using LoRA and integrated with **FAISS vector search** to create a production-ready knowledge assistant.
 
 ### 🏆 Key Achievements
 - **🎯 85%+ semantic accuracy** with expert-level response quality
