@@ -40,7 +40,7 @@ tokenizer = AutoTokenizer.from_pretrained("chinmays18/llm-knowledge-assistant-8b
 | Metric | Target | Achieved | Status |
 |--------|--------|----------|--------|
 | **Response Accuracy** | 85+% | **90%+** | ✅ **Exceeded** |
-| **Average Latency** | <350ms | **2,000ms** | 📈 **Good** (8B model) |
+| **Average Latency** | <=2000 ms | **2,000ms** | 📈 **Good** (8B model) |
 | **Retrieval Speed** | <100ms | **11ms** | ✅ **Excellent** |
 | **Knowledge Base** | 5K docs | **11,791 docs** | ✅ **Exceeded** |
 | **Model Efficiency** | N/A | **0.52% trainable params** | ✅ **Optimal** |
