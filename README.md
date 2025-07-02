@@ -107,7 +107,7 @@ python app.py
 curl -X POST http://localhost:5000/query \
   -H "Content-Type: application/json" \
   -d '{
-    "query": "What is the difference between supervised and unsupervised learning?",
+    "query": "How do I prevent buffer overflow in C?",
     "top_k": 3,
     "return_sources": true
   }'
@@ -118,7 +118,7 @@ curl -X POST http://localhost:5000/query \
 **Input Query:**
 ```json
 {
-  "query": "Explain overfitting and how to prevent it",
+  "query": "How do I properly manage memory allocation in C?",
   "top_k": 5
 }
 ```
@@ -126,7 +126,7 @@ curl -X POST http://localhost:5000/query \
 **Expert-Level Response (2.1s):**
 ```json
 {
-  "answer": "Overfitting occurs when your model is too closely fit to the training data, causing poor generalization to new data. Prevention methods include regularization techniques, cross-validation, early stopping, data augmentation, and using simpler model architectures.",
+  "answer": "Use malloc() for dynamic allocation and always pair with free() to prevent memory leaks. Check return values for NULL, use valgrind for debugging, and consider using calloc() for zero-initialized memory. Set pointers to NULL after freeing.",
   "response_time_ms": 2067,
   "retrieval_time_ms": 11,
   "generation_time_ms": 2056
