@@ -12,6 +12,22 @@
 
 Built an **enterprise-grade Retrieval-Augmented Generation (RAG) system** specializing in **C programming and AWS cloud architecture** that delivers expert-level responses to technical questions. Successfully fine-tuned **Llama-3.1-8B** using LoRA and integrated with **FAISS vector search** to create a production-ready knowledge assistant.
 
+## 📚 Model Access
+
+The fine-tuned model is publicly available on Hugging Face Hub:
+
+**🤗 [chinmays18/llm-knowledge-assistant-8b](https://huggingface.co/chinmays18/llm-knowledge-assistant-8b)**
+
+```python
+# Load the model directly
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from peft import PeftModel
+
+base_model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
+model = PeftModel.from_pretrained(base_model, "chinmays18/llm-knowledge-assistant-8b")
+tokenizer = AutoTokenizer.from_pretrained("chinmays18/llm-knowledge-assistant-8b")
+```
+
 ### 🏆 Key Achievements
 - **🎯 85%+ semantic accuracy** with expert-level response quality
 - **⚡ 2.0s average response time** (optimized from 13s baseline)
@@ -264,21 +280,6 @@ P99: 2,680ms
 - **Production Optimization**: Systematic latency reduction while maintaining quality
 - **Scalable Design**: Modular architecture supporting various deployment scenarios
 
-## 📚 Model Access
-
-The fine-tuned model is publicly available on Hugging Face Hub:
-
-**🤗 [chinmays18/llm-knowledge-assistant-8b](https://huggingface.co/chinmays18/llm-knowledge-assistant-8b)**
-
-```python
-# Load the model directly
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from peft import PeftModel
-
-base_model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
-model = PeftModel.from_pretrained(base_model, "chinmays18/llm-knowledge-assistant-8b")
-tokenizer = AutoTokenizer.from_pretrained("chinmays18/llm-knowledge-assistant-8b")
-```
 
 ## 🤝 Contributing
 
