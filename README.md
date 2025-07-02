@@ -23,7 +23,7 @@ Built an **enterprise-grade Retrieval-Augmented Generation (RAG) system** specia
 
 | Metric | Target | Achieved | Status |
 |--------|--------|----------|--------|
-| **Response Accuracy** | 86% | **90%+** | ✅ **Exceeded** |
+| **Response Accuracy** | 85+% | **90%+** | ✅ **Exceeded** |
 | **Average Latency** | <350ms | **2,000ms** | 📈 **Good** (8B model) |
 | **Retrieval Speed** | <100ms | **11ms** | ✅ **Excellent** |
 | **Knowledge Base** | 5K docs | **11,791 docs** | ✅ **Exceeded** |
