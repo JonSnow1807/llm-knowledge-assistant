@@ -1,0 +1,138 @@
+{
+  "test_timestamp": "2025-07-02T02:20:25.597776",
+  "system_info": {
+    "model": "Llama-3.1-8B-Instruct (Fine-tuned)",
+    "architecture": "RAG + FAISS Vector Search",
+    "hardware": "GPU-accelerated inference"
+  },
+  "test_suites": {
+    "latency_by_complexity": {
+      "simple": {
+        "query_count": 5,
+        "avg_ms": 2102.0853996276855,
+        "median_ms": 1808.7916374206543,
+        "min_ms": 1713.8144969940186,
+        "max_ms": 3040.8267974853516,
+        "std_dev_ms": 554.7746613433309,
+        "sample_responses": [
+          "Artificial intelligence is a field of computer science that enables computers to perform tasks that ",
+          "ML is a programming language. It is an abbreviation of Meta Language. It is a general-purpose, multi",
+          "NLP stands for Natural Language Processing. It is a subfield of artificial intelligence that deals w",
+          "CNN stands for C News. It is a newsreader program that is part of the C News system for distributing",
+          "RNN stands for Recurrent Neural Network. It is a type of neural network that is used for tasks that "
+        ]
+      },
+      "medium": {
+        "query_count": 5,
+        "avg_ms": 1699.6513843536377,
+        "median_ms": 1697.9455947875977,
+        "min_ms": 1682.4042797088623,
+        "max_ms": 1719.3238735198975,
+        "std_dev_ms": 13.285322525029828,
+        "sample_responses": [
+          "Machine learning is a field of study that focuses on developing algorithms and statistical models th",
+          "Supervised learning is a type of machine learning where an algorithm is trained on labeled data. The",
+          "Neural networks are a way to implement machine learning algorithms. They are modeled after the human",
+          "Deep learning is a subset of machine learning based on the concept of artificial neural networks. It",
+          "Reinforcement learning is a type of machine learning where an agent learns to behave in an environme"
+        ]
+      },
+      "complex": {
+        "query_count": 5,
+        "avg_ms": 1698.522424697876,
+        "median_ms": 1702.3084163665771,
+        "min_ms": 1683.1367015838623,
+        "max_ms": 1713.3691310882568,
+        "std_dev_ms": 13.440229858032925,
+        "sample_responses": [
+          "Supervised learning is when you have labeled data and you want to train a model to predict the label",
+          "Transformer is a neural network architecture that is primarily used in natural language processing (",
+          "Overfitting is when a model is too closely fit to the training data and fails to generalize well to ",
+          "CNNs are used for image and video data, RNNs are used for sequential data. CNNs are much faster than",
+          "Gradient Descent is an optimization algorithm used to find the values of parameters that minimize th"
+        ]
+      }
+    },
+    "accuracy_scenarios": {
+      "Basic Definitions": {
+        "query": "What is machine learning?",
+        "response_time_ms": 1703.155517578125,
+        "accuracy_score": 0.5,
+        "keywords_found": [
+          "algorithm",
+          "learn"
+        ],
+        "keywords_expected": [
+          "algorithm",
+          "data",
+          "learn",
+          "pattern"
+        ],
+        "response_preview": "Machine learning is a field of study that focuses on developing algorithms and statistical models that enable machines to perform a specific task with"
+      },
+      "Technical Concepts": {
+        "query": "Explain gradient descent",
+        "response_time_ms": 1708.897352218628,
+        "accuracy_score": 0.75,
+        "keywords_found": [
+          "optimization",
+          "minimize",
+          "gradient"
+        ],
+        "keywords_expected": [
+          "optimization",
+          "minimize",
+          "loss",
+          "gradient"
+        ],
+        "response_preview": "Gradient descent is an optimization algorithm used to minimize some function. Assumethat you want to find the minimum of a function"
+      },
+      "Practical Applications": {
+        "query": "What is computer vision used for?",
+        "response_time_ms": 1734.4002723693848,
+        "accuracy_score": 0.25,
+        "keywords_found": [
+          "vision"
+        ],
+        "keywords_expected": [
+          "image",
+          "recognition",
+          "detection",
+          "vision"
+        ],
+        "response_preview": "Computer vision is used in a wide variety of applications, including: Robotics: Computer vision is used to help robots understand their environment"
+      },
+      "Problem Solving": {
+        "query": "How do you prevent overfitting?",
+        "response_time_ms": 1736.9194030761719,
+        "accuracy_score": 0.25,
+        "keywords_found": [
+          "regularization"
+        ],
+        "keywords_expected": [
+          "regularization",
+          "validation",
+          "dropout",
+          "data"
+        ],
+        "response_preview": "Regularization is a common technique to prevent overfitting. There are two types of regularization: L1 and L2."
+      }
+    },
+    "stress_test": {
+      "query_count": 10,
+      "avg_ms": 1725.3862857818604,
+      "median_ms": 1706.5622806549072,
+      "min_ms": 1671.6008186340332,
+      "max_ms": 1942.2111511230469,
+      "std_dev_ms": 77.45991850949869,
+      "performance_degradation": 270.6103324890137
+    }
+  },
+  "overall_performance": {
+    "total_tests": 8,
+    "global_avg_ms": 1763.6272549629211,
+    "global_median_ms": 1717.1418190002441,
+    "target_350ms_achieved": false,
+    "performance_category": "Good - Knowledge assistant use case"
+  }
+}
