@@ -138,6 +138,12 @@ curl -X POST http://localhost:5000/query \
 
 ## 🔬 Technical Implementation
 
+### Training Data Engineering
+- **Source Selection**: Curated high-quality datasets (Stack Overflow + AWS)
+- **Data Processing**: Text cleaning, length normalization, quality filtering
+- **Domain Coverage**: Systems programming (C) + Cloud architecture (AWS)
+- **Quality Assurance**: Community-validated answers + official documentation
+
 ### Fine-Tuning Pipeline
 - **Base Model**: Llama-3.1-8B-Instruct (8B parameters)
 - **Adaptation Method**: LoRA (Low-Rank Adaptation)
