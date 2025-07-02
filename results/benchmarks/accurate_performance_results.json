@@ -9,7 +9,6 @@
     "max_ms": 1753,
     "std_dev_ms": 59.162334455139764,
     "percentile_95": 1753,
-    "target_350ms_achievement": false
   },
   "scenario_breakdown": {
     "Basic Concept": {
