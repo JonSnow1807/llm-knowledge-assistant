@@ -13,7 +13,7 @@
 Built an **enterprise-grade Retrieval-Augmented Generation (RAG) system** that delivers expert-level responses to technical questions. Successfully fine-tuned **Llama-3.1-8B** using LoRA and integrated with **FAISS vector search** to create a production-ready knowledge assistant.
 
 ### 🏆 Key Achievements
-- **🎯 90%+ accuracy** on domain-specific technical questions
+- **🎯 85%+ semantic accuracy** with expert-level response quality
 - **⚡ 2.0s average response time** (optimized from 13s baseline)
 - **📚 11,791 knowledge documents** indexed with semantic search  
 - **🚀 7.5x performance optimization** through systematic bottleneck analysis
