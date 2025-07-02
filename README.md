@@ -62,15 +62,12 @@ graph TB
     A[User Query] --> B[Flask API Gateway]
     B --> C[FAISS Vector Search<br/>11ms retrieval]
     C --> D[Document Ranking & Context Assembly]
-    D --> E[Fine-tuned Llama-3.1-8B<br/>LoRA Adapters]
+    D --> E[Fine-tuned Llama-3.1-8B<br/>C Programming + AWS Expert]
     E --> F[Expert Response<br/>~2000ms total]
     
-    G[Knowledge Base<br/>11,791 documents] --> C
-    H[Training Dataset<br/>5,890 Q&A pairs] --> I[LoRA Fine-tuning Pipeline]
+    G[Knowledge Base<br/>6K Stack Overflow + 209 AWS Docs] --> C
+    H[Training Dataset<br/>C Programming + AWS Architecture] --> I[LoRA Fine-tuning Pipeline]
     I --> E
-    
-    J[Docker Container] --> B
-    K[GPU Infrastructure] --> E
 ```
 
 ## 🚀 Quick Start
